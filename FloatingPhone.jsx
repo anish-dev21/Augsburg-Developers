@@ -22,21 +22,24 @@ export default function FloatingPhone() {
         {showCamera && <CameraScreen />}
         {showProfile && <ProfileScreen />}
         {!showCamera && !showProfile && (
-          <div className="chart-container">
-            <PieChart data={dataMock} radius={40} lineWidth={50} animate />
-            <div className="labels-container">
-              {dataMock.map((item, index) => (
-                <div key={index} className="bar-chart-container">
-                  <span>{item.title}</span>
-                  <progress
-                    data-title={item.title}
-                    value={item.value}
-                    max="100"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+         <div className="chart-and-labels">
+         <div className="chart-container">
+         <PieChart data={dataMock} radius={35} lineWidth={50} animate />
+         </div>
+       
+         <div className="labels-container">
+         {dataMock.map((item, index) => (
+           <div key={index} className="bar-chart-container">
+             <span>{item.title}</span>
+             <progress
+               data-title={item.title}
+               value={item.value}
+               max="100"
+             />
+           </div>
+         ))}
+       </div>
+       </div>
         )}
         <div className="nav-bar">
           <MdCameraAlt

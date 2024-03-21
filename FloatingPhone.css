@@ -1,21 +1,26 @@
 .floating-phone {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 900px;
+  width: 380px;
+  height: 65%;   /* Reduced the height of phone */
   background: #f0f0f0;
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .screen {
-  padding: 20px;
+  position: relative;
   background-color: #fff;
   display: flex;
-  height: 100%;
+  height: calc(100% - 70px);
   flex-direction: column;
+  overflow: auto;
+  border-radius: 20px;
 }
 
 .chart-container {
@@ -34,9 +39,9 @@
   justify-content: space-around;
   align-items: center;
   background-color: #333;
-  height: 100px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  height: 70px; 
+  border-bottom-left-radius: 20px;  
+  border-bottom-right-radius: 20px; 
 }
 
 .labels-container {
@@ -47,7 +52,7 @@
 }
 
 .bar-chart-container {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 80%;
   display: flex;
   font-size: 20px;
@@ -66,18 +71,6 @@ progress {
   appearance: none;
   height: 20px;
   border: none;
-}
-
-.progress-bar {
-  width: 100px;
-  height: 10px;
-  background: #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-bar-fill {
-  height: 100%;
 }
 
 progress[data-title="Proteins"]::-webkit-progress-value {
@@ -99,14 +92,15 @@ progress[data-title="Fat"]::-webkit-progress-value {
 .icon {
   cursor: pointer;
   color: #fff;
-  font-size: 48px;
+  font-size: 38px;
 }
 
 .icon:hover {
   transform: scale(1.1);
 }
+
 .screen,
 .floating-phone {
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }

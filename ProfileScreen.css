@@ -1,21 +1,24 @@
 .info-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* increase the minmax value */
   grid-gap: 30px;
+  overflow: auto;   /* add scroll bar when content is more */
 }
 
 .profile-item {
   background: #f2f2f2;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  margin-bottom: 50px;
+  font-size: 24px;   /* decrease the font size of h1 */
+  margin-bottom: 20px;
 }
 
 .logout-btn {
+  font-size: 14px; /*decrease the font size of button */
   background-color: #ff2567;
   color: white;
   border: none;
@@ -26,8 +29,17 @@ h1 {
   margin: 10px 0 60px 0;
 }
 
+h4 {
+  font-size: 14px; /*decrease the font size of h4 */
+}
+
+p {
+  font-size: 12px;  /*decrease the font size of p */
+}
+
 .profile-screen {
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
+  font-size: 10px;
 }
 
 .hidden {

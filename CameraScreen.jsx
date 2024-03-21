@@ -19,7 +19,7 @@ export const CameraScreen = () => {
         className="webcam"
       />
       <button className="capture-btn" onClick={capture}>
-        <MdCameraAlt size={40} />
+        <MdCameraAlt size={30} />
       </button>
     </div>
   );
